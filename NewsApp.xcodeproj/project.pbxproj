@@ -84,9 +84,9 @@
 		FA63CC6C29632ECD00FB1976 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA61F1C4296345AE00659B2C /* Config */,
 				FA61F1CB2963497700659B2C /* Networking */,
 				FA61F1C8296346C000659B2C /* Models */,
-				FA61F1C4296345AE00659B2C /* Config */,
 				FA63CC6D29632ECD00FB1976 /* AppDelegate.swift */,
 				FA63CC6F29632ECD00FB1976 /* SceneDelegate.swift */,
 				FA63CC7129632ECD00FB1976 /* ViewController.swift */,

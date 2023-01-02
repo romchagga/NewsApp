@@ -9,12 +9,12 @@ import Foundation
 
 struct Envelope: Decodable {
     let status: String?
-    let totalResults: String?
+    let totalResults: Int?
     let articles: [News]
 }
 
 struct News: Decodable {
-    let autor: String?
+    let author: String?
     let title: String?
     let description: String?
     let url: String?
