@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA1EA87C29644FA500560CC6 /* ShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA87B29644FA500560CC6 /* ShadowImageView.swift */; };
+		FA1EA8802964589F00560CC6 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA87F2964589F00560CC6 /* NewsTableViewCell.swift */; };
 		FA61F1C6296345CC00659B2C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61F1C5296345CC00659B2C /* APIKey.swift */; };
 		FA61F1CA296346D300659B2C /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61F1C9296346D300659B2C /* News.swift */; };
 		FA61F1CD2963499200659B2C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61F1CC2963499200659B2C /* NetworkManager.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		FA1EA87B29644FA500560CC6 /* ShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowImageView.swift; sourceTree = "<group>"; };
+		FA1EA87F2964589F00560CC6 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		FA61F1C5296345CC00659B2C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		FA61F1C9296346D300659B2C /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		FA61F1CC2963499200659B2C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				FA61F1D729638E1D00659B2C /* HeaderView.swift */,
 				FA1EA87B29644FA500560CC6 /* ShadowImageView.swift */,
+				FA1EA87F2964589F00560CC6 /* NewsTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA61F1CD2963499200659B2C /* NetworkManager.swift in Sources */,
+				FA1EA8802964589F00560CC6 /* NewsTableViewCell.swift in Sources */,
 				FA61F1D829638E1D00659B2C /* HeaderView.swift in Sources */,
 				FA63CC7229632ECD00FB1976 /* ViewController.swift in Sources */,
 				FA63CC6E29632ECD00FB1976 /* AppDelegate.swift in Sources */,
