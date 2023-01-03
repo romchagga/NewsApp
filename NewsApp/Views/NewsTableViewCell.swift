@@ -13,10 +13,16 @@ final class NewsTableViewCell: UITableViewCell {
     var newsVM: NewsViewModel? {
         didSet {
             if let newsVM = newsVM {
-                
+                titleLabel.text = newsVM.title
+                NetwrokManager.shared.getImage(urlString: newsVM.urlToImage) { data in
+                    guard let data = data else {return}
+                    DispatchQueue.main.async {
+                        self.newsImageView.image = UIImage(data: data)
+                    }
+                }
+                }
             }
         }
-    }
     
     var newsImageData: Data? {
         didSet {
@@ -51,6 +57,7 @@ final class NewsTableViewCell: UITableViewCell {
     }
     
     func setupView() {
+        backgroundColor = UIColor(red: 31/255, green: 33/255, blue: 37/255, alpha: 1)
         addSubview(titleLabel)
         addSubview(newsImageView)
         setupConstraints()
@@ -68,10 +75,9 @@ final class NewsTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 16)
+            titleLabel.topAnchor.constraint(equalTo: newsImageView.bottomAnchor, constant: 8),
+            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
         ])
     }
-
 }
 

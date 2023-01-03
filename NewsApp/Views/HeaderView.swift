@@ -48,6 +48,7 @@ class HeaderView: UIView {
         self.fontSize = fontSize
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
+        setUpView()
     }
     
     func setUpView() {

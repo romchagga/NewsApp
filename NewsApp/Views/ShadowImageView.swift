@@ -17,8 +17,8 @@ class ShadowImageView: UIView {
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
-        layer.cornerRadius = 20
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 20
         imageView.clipsToBounds = true
         return imageView
     }()
@@ -36,7 +36,7 @@ class ShadowImageView: UIView {
     
     init() {
         super.init(frame: .zero)
-        
+
         setupView()
     }
     
@@ -51,15 +51,19 @@ class ShadowImageView: UIView {
     }
     
     func setupConstraints() {
-        [basedShadowView, imageView].forEach { view in
             NSLayoutConstraint.activate([
-                view.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-                view.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-                view.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-                view.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
+                basedShadowView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+                basedShadowView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+                basedShadowView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+                basedShadowView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
             ])
             
-        }
+            NSLayoutConstraint.activate([
+                imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+                imageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+                imageView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+                imageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
+            ])
     }
     
     override func layoutSubviews() {

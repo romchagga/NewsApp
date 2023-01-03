@@ -90,6 +90,7 @@
 				FA61F1D729638E1D00659B2C /* HeaderView.swift */,
 				FA1EA87B29644FA500560CC6 /* ShadowImageView.swift */,
 				FA1EA87F2964589F00560CC6 /* NewsTableViewCell.swift */,
+				FA63CC7129632ECD00FB1976 /* ViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,7 +121,6 @@
 				FA61F1C8296346C000659B2C /* Models */,
 				FA63CC6D29632ECD00FB1976 /* AppDelegate.swift */,
 				FA63CC6F29632ECD00FB1976 /* SceneDelegate.swift */,
-				FA63CC7129632ECD00FB1976 /* ViewController.swift */,
 				FA63CC7629632ECF00FB1976 /* Assets.xcassets */,
 				FA63CC7829632ECF00FB1976 /* LaunchScreen.storyboard */,
 				FA63CC7B29632ECF00FB1976 /* Info.plist */,
