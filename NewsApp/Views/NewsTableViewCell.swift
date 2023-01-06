@@ -41,6 +41,7 @@ final class NewsTableViewCell: UITableViewCell {
     private lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.textColor = .white
         titleLabel.numberOfLines = 0
         return titleLabel
     }()

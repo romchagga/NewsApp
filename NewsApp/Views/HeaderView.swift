@@ -24,7 +24,7 @@ class HeaderView: UIView {
         imageV.translatesAutoresizingMaskIntoConstraints = false
         imageV.contentMode = .scaleAspectFit
         let config = UIImage.SymbolConfiguration(pointSize: fontSize, weight: .bold)
-        imageV.image = UIImage(systemName: "circle.inset.filled", withConfiguration: config)?.withRenderingMode(.alwaysOriginal)
+        imageV.image = UIImage(systemName: "circle.inset.filled", withConfiguration: nil)?.withRenderingMode(.alwaysOriginal)
         return imageV
     }()
     
@@ -33,7 +33,7 @@ class HeaderView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = label.font.withSize(fontSize)
         label.text = "Главные новости"
-        label.textColor = .gray
+        label.textColor = .white
         return label
     }()
     
