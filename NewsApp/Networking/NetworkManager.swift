@@ -15,7 +15,7 @@ class NetwrokManager {
     private init() {}
     
     private let baseURL = "https://newsapi.org/v2/"
-    private let ruTopHeadline = "top-headlines?country=ru"
+    private let ruTopHeadline = "top-headlines?country=ru&category=sport"
     
     func getNews(completion: @escaping ([News]?) -> ()) {
         let url = URL(string: baseURL + ruTopHeadline + "&apikey=\(APIKey.apiKey)")

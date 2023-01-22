@@ -14,8 +14,9 @@ class HeaderView: UIView {
     private lazy var headingLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "News"
+        label.text = "SportsNews"
         label.font = UIFont.boldSystemFont(ofSize: fontSize)
+        label.textColor = .gray
         return label
     }()
     
@@ -24,7 +25,7 @@ class HeaderView: UIView {
         imageV.translatesAutoresizingMaskIntoConstraints = false
         imageV.contentMode = .scaleAspectFit
         let config = UIImage.SymbolConfiguration(pointSize: fontSize, weight: .bold)
-        imageV.image = UIImage(systemName: "circle.inset.filled", withConfiguration: nil)?.withRenderingMode(.alwaysOriginal)
+        imageV.image = UIImage(systemName: "sportscourt.fill", withConfiguration: nil)?.withRenderingMode(.alwaysOriginal)
         return imageV
     }()
     
@@ -41,6 +42,7 @@ class HeaderView: UIView {
         let stack = UIStackView(arrangedSubviews: [headerCircleImage , headingLabel])
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .horizontal
+        stack.spacing = 10
         return stack
     }()
     
