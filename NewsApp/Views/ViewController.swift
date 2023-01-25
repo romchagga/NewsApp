@@ -58,8 +58,8 @@ class ViewController: UIViewController {
     }
     
     func fetchNews() {
-        viewModel.getNews { _ in
-            self.tableView.reloadData()
+        viewModel.getNews { [weak self] _ in
+            self?.tableView.reloadData()
         }
     }
 }

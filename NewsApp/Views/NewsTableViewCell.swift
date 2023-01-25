@@ -14,10 +14,10 @@ final class NewsTableViewCell: UITableViewCell {
         didSet {
             if let newsVM = newsVM {
                 titleLabel.text = newsVM.title
-                NetwrokManager.shared.getImage(urlString: newsVM.urlToImage) { data in
+                NetwrokManager.shared.getImage(urlString: newsVM.urlToImage) { [weak self] data in
                     guard let data = data else {return}
                     DispatchQueue.main.async {
-                        self.newsImageView.image = UIImage(data: data)
+                        self?.newsImageView.image = UIImage(data: data)
                     }
                 }
                 }

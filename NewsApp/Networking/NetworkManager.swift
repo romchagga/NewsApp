@@ -36,9 +36,9 @@ class NetwrokManager {
         if let cachedImage = imageCache.object(forKey: urlString as NSString) {
             completion(cachedImage as Data)
         } else {
-            URLSession.shared.dataTask(with: url) { data, response, error in
+            URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
                 guard let data = data else {return}
-                self.imageCache.setObject((data as NSData), forKey: (urlString as NSString))
+                self?.imageCache.setObject((data as NSData), forKey: (urlString as NSString))
                 completion(data)
             }.resume()
         }
