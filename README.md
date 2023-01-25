@@ -9,5 +9,6 @@
 * UIKit
 * MVVM
 * URLSession
+* SFSafariViewController
 * NoStoryboard
 * NSLayoutConstraint
